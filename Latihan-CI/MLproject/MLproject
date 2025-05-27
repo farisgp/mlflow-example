@@ -1,0 +1,11 @@
+name: latihan-cs-mlflow
+ 
+conda_env: conda.yaml
+ 
+entry_points:
+  main:
+    parameters:
+      n_estimators: {type: int, default: 505}
+      max_depth: {type: int, default: 35}
+      dataset : {type: string, default: "https://raw.githubusercontent.com/dicodingacademy/ML-System/refs/heads/main/Modul%202%20-%20Membangun%20dan%20Mengelola%20Metadata%20dengan%20Tools%20Open-Source/Latihan%20Membuat%20Version%20Control%20Menggunakan%20MLflow/train_pca.csv"}
+    command: "python modelling.py {n_estimators} {max_depth} {dataset}"
